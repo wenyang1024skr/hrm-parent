@@ -17,4 +17,5 @@ public interface CourseTypeMapper extends BaseMapper<CourseType> {
 
     List<CourseType> selectParent();
 
+    CourseType selectCurrent(Long id);
 }

@@ -57,7 +57,8 @@ public class CourseTypeController {
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public CourseType get(@PathVariable("id")Long id)
     {
-        return courseTypeService.selectById(id);
+
+        return courseTypeService.selectParent(id);
     }
 
 
@@ -77,7 +78,8 @@ public class CourseTypeController {
     @RequestMapping(value = "/treeData",method = RequestMethod.GET)
     public List<CourseType> treeData(){
 
-        return courseTypeService.selectList(null);
+
+        return courseTypeService.treeData();
     }
 
 

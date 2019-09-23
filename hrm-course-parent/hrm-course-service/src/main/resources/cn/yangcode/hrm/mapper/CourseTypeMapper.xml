@@ -54,4 +54,22 @@
         where pid=0
 
     </select>
+
+    <select id="selectCurrent" resultMap="BaseResultMap" parameterType="long">
+        select
+        id,
+        createTime,
+        updateTime,
+        name,
+        pid,
+        logo,
+        description,
+        sortIndex,
+        path,
+        totalCount,
+        totalCount
+        from t_course_type
+        where id=#{id}
+
+    </select>
 </mapper>

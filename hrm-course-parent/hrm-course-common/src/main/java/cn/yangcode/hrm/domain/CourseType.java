@@ -27,8 +27,11 @@ public class CourseType extends Model<CourseType> {
     private Long createTime;
     private Long updateTime;
 
+
+
     @TableField(exist = false)
-    private List<CourseType> childern = new ArrayList<>();
+    private List<CourseType> children = new ArrayList<>();
+
     /**
      * 类型名
      */
@@ -55,6 +58,16 @@ public class CourseType extends Model<CourseType> {
      */
     private Integer totalCount;
 
+
+
+
+    public List<CourseType> getChildren() {
+        return children;
+    }
+
+    public void setChildren(List<CourseType> children) {
+        this.children = children;
+    }
 
     public Long getId() {
         return id;
