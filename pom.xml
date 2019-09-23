@@ -12,6 +12,7 @@
         <module>hrm-basic-parent</module>
         <module>hrm-support-parent</module>
         <module>hrm-systemmanage-parent</module>
+        <module>hrm-course-parent</module>
     </modules>
 
     <properties>
@@ -27,6 +28,11 @@
     </parent>
    <dependencyManagement>
        <dependencies>
+           <dependency>
+               <groupId>cn.yangcode</groupId>
+               <artifactId>hrm-course-common</artifactId>
+               <version>1.0-SNAPSHOT</version>
+           </dependency>
            <!--引入swagger支持-->
            <dependency>
                <groupId>io.springfox</groupId>

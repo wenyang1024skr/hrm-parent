@@ -1,0 +1,23 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1010/eureka/ #注册中心地址
+  instance:
+    prefer-ip-address: true #使用ip地址注册
+    instance-id: hrm-config-server  #指定服务的id
+server:
+  port: 1030
+spring:
+  application:
+    name: hrm-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/wenyang1024skr/hrm-config.git #配置远程仓库地址
+          username: wenyang1024skr
+          password:
+
+          #uri: https://gitee.com/baidu11.com/hrm-config.git #配置远程仓库地址
+          #username: 1456868501@qq.com
+          #password: wodemima123

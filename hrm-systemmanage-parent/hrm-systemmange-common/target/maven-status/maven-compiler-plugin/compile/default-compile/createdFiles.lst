@@ -1,0 +1,4 @@
+cn\yangcode\hrm\query\SystemdictionaryQuery.class
+cn\yangcode\hrm\domain\Systemdictionaryitem.class
+cn\yangcode\hrm\query\SystemdictionaryitemQuery.class
+cn\yangcode\hrm\domain\Systemdictionary.class

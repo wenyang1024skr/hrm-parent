@@ -26,6 +26,7 @@ public class DocumentationConfig implements SwaggerResourcesProvider {
          * location:指定是微服务的路径   /前缀/服务名/v2/api-docs
          */
         resources.add(swaggerResource("系统管理", "/hrm/system/v2/api-docs", "2.0"));
+        resources.add(swaggerResource("课程服务", "/hrm/course/v2/api-docs", "2.0"));
 
         return resources;
     }
