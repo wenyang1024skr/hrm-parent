@@ -70,6 +70,15 @@ public class CourseTypeController {
 
         return courseTypeService.selectList(null);
     }
+    /**
+     * 课程树型结构数据
+     * @return
+     */
+    @RequestMapping(value = "/treeData",method = RequestMethod.GET)
+    public List<CourseType> treeData(){
+
+        return courseTypeService.selectList(null);
+    }
 
 
     /**

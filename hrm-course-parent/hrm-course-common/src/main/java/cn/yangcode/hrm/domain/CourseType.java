@@ -1,10 +1,13 @@
 package cn.yangcode.hrm.domain;
 
+import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.enums.IdType;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>
@@ -23,6 +26,9 @@ public class CourseType extends Model<CourseType> {
     private Long id;
     private Long createTime;
     private Long updateTime;
+
+    @TableField(exist = false)
+    private List<CourseType> childern = new ArrayList<>();
     /**
      * 类型名
      */
