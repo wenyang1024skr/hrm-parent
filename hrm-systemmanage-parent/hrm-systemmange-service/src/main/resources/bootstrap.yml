@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:1030
+      name: application-systemmanage
+      profile: dev
+      label: master
