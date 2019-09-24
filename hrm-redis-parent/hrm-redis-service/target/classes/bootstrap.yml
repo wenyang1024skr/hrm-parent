@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:1030
+      name: application-redis   #application-redis-dev.yml
+      profile: dev
+      label: master
