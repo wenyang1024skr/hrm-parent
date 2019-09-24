@@ -13,6 +13,7 @@
         <module>hrm-support-parent</module>
         <module>hrm-systemmanage-parent</module>
         <module>hrm-course-parent</module>
+        <module>hrm-redis-parent</module>
     </modules>
 
     <properties>

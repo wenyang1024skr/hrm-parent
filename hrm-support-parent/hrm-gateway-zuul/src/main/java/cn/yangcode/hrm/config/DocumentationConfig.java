@@ -27,6 +27,7 @@ public class DocumentationConfig implements SwaggerResourcesProvider {
          */
         resources.add(swaggerResource("系统管理", "/hrm/system/v2/api-docs", "2.0"));
         resources.add(swaggerResource("课程服务", "/hrm/course/v2/api-docs", "2.0"));
+        resources.add(swaggerResource("Redis服务", "/hrm/redis/v2/api-docs", "2.0"));
 
         return resources;
     }

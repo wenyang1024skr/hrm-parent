@@ -16,6 +16,7 @@ zuul:
   routes: #配置路由，指定服务的访问路径
     hrm-systemmanage-service: "/system/**"
     hrm-course-service: "/course/**"
+    hrm-redis-service: "/redis/**"
   retryable: true #开启重试
 ribbon:
   ConnectTimeout: 2000  # 连接超时时间(ms)
