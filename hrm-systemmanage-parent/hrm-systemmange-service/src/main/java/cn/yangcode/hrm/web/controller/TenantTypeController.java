@@ -5,6 +5,7 @@ import cn.yangcode.hrm.domain.TenantType;
 import cn.yangcode.hrm.query.TenantTypeQuery;
 import cn.yangcode.hrm.util.AjaxResult;
 import cn.yangcode.hrm.util.PageList;
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -82,7 +83,9 @@ public class TenantTypeController {
     public PageList<TenantType> json(@RequestBody TenantTypeQuery query)
     {
         Page<TenantType> page = new Page<TenantType>(query.getPage(),query.getRows());
-        page = tenantTypeService.selectPage(page);
+        EntityWrapper<TenantType> tenantTypeEntityWrapper = new EntityWrapper<>();
+        tenantTypeEntityWrapper.like("name", query.getKeyword());
+        page = tenantTypeService.selectPage(page,tenantTypeEntityWrapper);
         return new PageList<TenantType>(page.getTotal(),page.getRecords());
     }
 }

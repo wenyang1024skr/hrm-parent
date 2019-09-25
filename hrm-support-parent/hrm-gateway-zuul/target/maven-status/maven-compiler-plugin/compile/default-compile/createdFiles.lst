@@ -1,3 +1,4 @@
 cn\yangcode\hrm\config\SwaggerConfig.class
 cn\yangcode\hrm\config\DocumentationConfig.class
 cn\yangcode\hrm\ZuulServerApplication.class
+cn\yangcode\hrm\config\GlobalCorsConfig.class

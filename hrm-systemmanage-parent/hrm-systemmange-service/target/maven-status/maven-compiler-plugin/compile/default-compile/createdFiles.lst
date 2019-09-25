@@ -1,11 +1,15 @@
+cn\yangcode\hrm\mapper\TenantTypeMapper.class
 cn\yangcode\hrm\config\Swagger2.class
 cn\yangcode\hrm\mapper\SystemdictionaryitemMapper.class
 cn\yangcode\hrm\service\ISystemdictionaryitemService.class
 cn\yangcode\hrm\web\controller\SystemdictionaryController.class
+cn\yangcode\hrm\service\impl\TenantTypeServiceImpl.class
 cn\yangcode\hrm\service\impl\SystemdictionaryitemServiceImpl.class
 cn\yangcode\hrm\service\impl\SystemdictionaryServiceImpl.class
+cn\yangcode\hrm\service\ITenantTypeService.class
 cn\yangcode\hrm\web\controller\SystemdictionaryitemController.class
 cn\yangcode\hrm\SystemManageApplication.class
+cn\yangcode\hrm\web\controller\TenantTypeController.class
 cn\yangcode\hrm\config\MybatisPlusConfig.class
 cn\yangcode\hrm\service\ISystemdictionaryService.class
 cn\yangcode\hrm\mapper\SystemdictionaryMapper.class
