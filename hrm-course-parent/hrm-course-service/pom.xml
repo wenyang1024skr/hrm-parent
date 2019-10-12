@@ -59,6 +59,18 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>cn.yangcode</groupId>
+            <artifactId>hrm-systemmange-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.yangcode</groupId>
+            <artifactId>hrm-page-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.yangcode</groupId>
+            <artifactId>hrm-es-client</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

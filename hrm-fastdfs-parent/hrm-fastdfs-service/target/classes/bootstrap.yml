@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:1030
+      name: application-fastdfs
+      profile: dev
+      label: master

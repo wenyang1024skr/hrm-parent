@@ -3,6 +3,8 @@ package cn.yangcode.hrm.service;
 import cn.yangcode.hrm.domain.Systemdictionaryitem;
 import com.baomidou.mybatisplus.service.IService;
 
+import java.util.List;
+
 /**
  * <p>
  *  服务类
@@ -13,4 +15,5 @@ import com.baomidou.mybatisplus.service.IService;
  */
 public interface ISystemdictionaryitemService extends IService<Systemdictionaryitem> {
 
+    List<Systemdictionaryitem> selectCourseLevelList(String sn);
 }

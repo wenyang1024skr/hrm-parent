@@ -5,10 +5,14 @@ import cn.yangcode.hrm.domain.TenantType;
 import cn.yangcode.hrm.query.TenantTypeQuery;
 import cn.yangcode.hrm.util.AjaxResult;
 import cn.yangcode.hrm.util.PageList;
+//import cn.yangcode.hrm.utils.FastDfsApiOpr;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
+
+//import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -88,4 +92,14 @@ public class TenantTypeController {
         page = tenantTypeService.selectPage(page,tenantTypeEntityWrapper);
         return new PageList<TenantType>(page.getTotal(),page.getRecords());
     }
+
+    //上传
+    /*@RequestMapping(value = "/upload")
+    public AjaxResult upload(MultipartFile file) throws Exception {
+        System.out.println("-------file--------" + file);
+        String extension = FilenameUtils.getExtension(file.getOriginalFilename());
+        String upload = FastDfsApiOpr.upload(file.getBytes(), extension);
+        System.out.println("=====upload======" + upload);
+        return AjaxResult.me().setResultObj(upload);
+    }*/
 }

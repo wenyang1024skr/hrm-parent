@@ -5,6 +5,7 @@ import cn.yangcode.hrm.domain.Systemdictionaryitem;
 import cn.yangcode.hrm.query.SystemdictionaryitemQuery;
 import cn.yangcode.hrm.util.AjaxResult;
 import cn.yangcode.hrm.util.PageList;
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -67,8 +68,18 @@ public class SystemdictionaryitemController {
     */
     @RequestMapping(value = "/list",method = RequestMethod.GET)
     public List<Systemdictionaryitem> list(){
-
         return systemdictionaryitemService.selectList(null);
+    }
+
+
+    /**
+     * 查看所有的课程等级信息
+     * @return
+     */
+    @RequestMapping(value = "/courselevel/{sn}",method = RequestMethod.GET)
+    public List<Systemdictionaryitem> courselevel(@PathVariable("sn")String sn){
+
+        return systemdictionaryitemService.selectCourseLevelList(sn);
     }
 
 
@@ -81,8 +92,11 @@ public class SystemdictionaryitemController {
     @RequestMapping(value = "/pagelist",method = RequestMethod.POST)
     public PageList<Systemdictionaryitem> json(@RequestBody SystemdictionaryitemQuery query)
     {
+        //page里的是当前页和当前页的数据条数
         Page<Systemdictionaryitem> page = new Page<Systemdictionaryitem>(query.getPage(),query.getRows());
-        page = systemdictionaryitemService.selectPage(page);
+        EntityWrapper<Systemdictionaryitem> systemdictionaryitemEntityWrapper = new EntityWrapper<>();
+        systemdictionaryitemEntityWrapper.like("name", query.getKeyword());
+        page = systemdictionaryitemService.selectPage(page, systemdictionaryitemEntityWrapper);
         return new PageList<Systemdictionaryitem>(page.getTotal(),page.getRecords());
     }
 }

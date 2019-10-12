@@ -14,6 +14,7 @@
     <modules>
         <module>hrm-systemmange-common</module>
         <module>hrm-systemmange-service</module>
+        <module>hrm-systemmange-client</module>
     </modules>
 
 

@@ -12,6 +12,13 @@
     <artifactId>hrm-systemmange-service</artifactId>
 
     <dependencies>
+        <!--<dependency>
+            <groupId>cn.yangcode</groupId>
+            <artifactId>hrm-fastdfs-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>-->
+
+
         <!--引入swagger支持-->
         <dependency>
             <groupId>io.springfox</groupId>

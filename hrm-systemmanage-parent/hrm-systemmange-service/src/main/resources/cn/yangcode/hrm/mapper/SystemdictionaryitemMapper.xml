@@ -10,5 +10,12 @@
         <result column="requence" property="requence" />
         <result column="intro" property="intro" />
     </resultMap>
+    <select id="CourseLevelList" resultMap="BaseResultMap">
+        select dic_ite.id,dic_ite.name
+        from t_systemdictionary dic
+        left join t_systemdictionaryitem dic_ite
+        on dic.id=dic_ite.parent_id
+        where dic.sn=#{sn}
+    </select>
 
 </mapper>

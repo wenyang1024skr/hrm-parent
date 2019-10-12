@@ -13,11 +13,11 @@ import org.springframework.stereotype.Component;
 public class RedisClientFallback implements RedisClient {
     @Override
     public AjaxResult get(String key) {
-        return AjaxResult.me().setSuccess(false).setMessage("error!!!");
+        return AjaxResult.me().setSuccess(false).setMessage("getError!!!");
     }
 
     @Override
     public AjaxResult set(String key, String value) {
-        return AjaxResult.me().setSuccess(false).setMessage("error!!!");
+        return AjaxResult.me().setSuccess(false).setMessage("setError!!!");
     }
 }

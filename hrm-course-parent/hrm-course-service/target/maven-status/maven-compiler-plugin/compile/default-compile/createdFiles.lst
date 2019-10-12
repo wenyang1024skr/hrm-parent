@@ -1,0 +1,7 @@
+cn\yangcode\hrm\service\impl\CourseTypeServiceImpl.class
+cn\yangcode\hrm\config\Swagger2.class
+cn\yangcode\hrm\mapper\CourseTypeMapper.class
+cn\yangcode\hrm\CourseServiceApplication.class
+cn\yangcode\hrm\web\controller\CourseTypeController.class
+cn\yangcode\hrm\service\ICourseTypeService.class
+cn\yangcode\hrm\config\MybatisPlusConfig.class
